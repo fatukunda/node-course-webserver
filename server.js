@@ -35,6 +35,11 @@ app.get('/bad', (req, res) => {
         status: 'Error has occurred'
     })
 });
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects page'
+    })
+});
 app.listen(port, () => {
     console.log(`App running on port ${port}`);
 });
